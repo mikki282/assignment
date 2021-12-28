@@ -5,7 +5,10 @@ provider "aws" {
 }
 module vpc {
   source = "C:/Users/mikki.kumari/Training/Terraform/vpc_module"
+
 }
 module instance {
   source = "C:/Users/mikki.kumari/Training/Terraform/ec2_instance"
+  count = 2
+  tag_name = "Server1"
 }
